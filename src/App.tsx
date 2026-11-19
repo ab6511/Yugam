@@ -16,7 +16,7 @@ import { Contact } from './pages/Contact';
 
 export const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-[#0B0D12] text-[#F8FAFC] flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white">
         {/* Automatic scroll reset on route change */}
         <ScrollToTop />
