@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Yugam/',
+  // Use '/' by default (for Vercel & local dev); use '/Yugam/' when building specifically for GitHub Pages
+  base: process.env.GITHUB_PAGES === 'true' ? '/Yugam/' : '/',
   plugins: [react()],
   server: {
     port: 3000,
